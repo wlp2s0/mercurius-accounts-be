@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "[Accounts] Launch dev",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/ts-node-dev",
+      "args": [
+        "--project",
+        "${workspaceFolder}/tsconfig.json",
+        "${workspaceRoot}/src/index.ts"
+      ],
+      "restart": true,
+      "skipFiles": [
+        "<node_internals>/**",
+        "node_modules/**"
+      ],
+      "envFile": "${workspaceFolder}/.env",
+      "env": {
+        "TS_NODE_PROJECT": "${workspaceFolder}/tsconfig.json"
+      },
+      "outputCapture": "std"
+    }
+  ]
+}
